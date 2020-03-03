@@ -3,27 +3,30 @@ import './main.scss'
 import {connect} from "react-redux";
 
 const Main = ({
-                  coctails
-              }) => {
+    coctails
+}) => {
     return (
         <div className="main">
-            {
-                coctails.coctailsList.drinks
-                && coctails.coctailsList.drinks.map((e, index) => {
-                    console.log(e.strDrink)
-                    return (
-                        <div className='main-item'>
+            
+            <div className="main-wrapper">
+            <p className="main-text">Ordinary Drinks</p>
+               {
+                  coctails.coctailsList.drinks 
+                  && coctails.coctailsList.drinks.map((e, index) => {
+                      console.log(e.strDrink)
+                      return (
+                            <div className="main-wrapper-item">
                             <img src={e.strDrinkThumb} alt=""/>
-                            <h1
-                                className='main-item-text'
+                            <h3 className="main-wrapper-item-text" 
                                 key={e + index}
-                            >
+                                >
                                 {e.strDrink}
-                            </h1>
+                            </h3>
                         </div>
                     )
-                })
-            }
+                  })
+                }
+            </div>
         </div>
     )
 }
