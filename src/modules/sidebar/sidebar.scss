@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border-right: 1px solid #D0D0D0;
+  border-right: 2px solid #D0D0D0;
 
   &-form {
     display: flex;
@@ -25,5 +25,6 @@
     margin-left: 120px;
     background: #4E4E4E;
     border-radius: 30px;
+    outline: none;
   }
 }
